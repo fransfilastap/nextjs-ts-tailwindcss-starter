@@ -16,7 +16,7 @@ export default function Home(): ReactElement {
         <p className='text-sm font-semibold text-center text-gray-800 dark:text-gray-400'>
           Included ESLint, Prettier, Lint-Staged and Commit Lint{' '}
         </p>
-        <div className='flex flex-col gap-1 mt-4 md:flex-row'>
+        <div className='flex flex-col items-center justify-center gap-1 mt-4 md:flex-row'>
           <Link
             aria-label='Deploy to Vercel'
             rel='noopener noreferrer'
@@ -42,9 +42,9 @@ export default function Home(): ReactElement {
           />
         </div>
         <Link
-          className='inline-flex items-center gap-2 p-1 text-sm rounded hover:bg-gray-200 dark:hover:bg-slate-600 dark:bg-slate-500'
+          className='inline-flex items-center gap-2 p-1 text-sm bg-gray-200 rounded hover:bg-gray-500 dark:hover:bg-slate-600 dark:bg-slate-500'
           aria-label='open github'
-          href="https://github.com/fransfilastap/nextjs-ts-tailwindcss-starter"
+          href='https://github.com/fransfilastap/nextjs-ts-tailwindcss-starter'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
