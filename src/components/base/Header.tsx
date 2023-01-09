@@ -4,7 +4,7 @@ import Container from '@/components/base/Container';
 import useScroll from '@/hooks/useScroll';
 import Logo from '@/components/base/Logo';
 import Navigation from '@/components/base/Navigation';
-import ColorModeButton from '@/components/ColorModeButton';
+import ColorModeSwitcher from '@/components/ColorModeSwitcher';
 
 type HeaderProps = ComponentPropsWithRef<'header'>;
 
@@ -17,16 +17,19 @@ export default function Header({
   return (
     <header
       className={clsxtw(
-        'transition-all duration-200 ease-in transform-gpu backdrop-blur-lg w-screen bg-white dark:bg-slate-800',
-        { 'bg-white/50 sticky translate-y-0 z-5 top-0': isScrolled },
+        'transition-all duration-200 ease-in transform-gpu backdrop-blur-lg w-screen bg-white dark:bg-black',
+        {
+          'bg-white/50 dark:bg-black/50 sticky translate-y-0 z-5 top-0':
+            isScrolled,
+        },
         className
       )}
       {...rest}
     >
-      <Container className="flex flex-row justify-between items-center">
+      <Container className='flex flex-row justify-between items-center'>
         <Logo />
-        <Navigation className="hidden md:flex flex-row md:gap-2">
-          <ColorModeButton />
+        <Navigation className='flex flex-row md:gap-2'>
+          <ColorModeSwitcher />
         </Navigation>
       </Container>
     </header>
