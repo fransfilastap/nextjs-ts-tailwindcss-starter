@@ -11,34 +11,31 @@ const Icons: Record<ColorMode, ReactElement> = {
 };
 type ColorModeSelectionProps = ComponentPropsWithRef<'select'>;
 
-const ColorModeSwitcher: FunctionComponent<ColorModeSelectionProps> = ({
-  className,
-  ...props
-}) => {
+const ColorModeSwitcher: FunctionComponent<ColorModeSelectionProps> = (
+  props
+) => {
   const [colorMode, setColorMode] = useColorMode();
   useIsMounted();
 
   return (
-    <div
-      className="relative flex items-center justify-between border border-gray-100 dark:border-gray-800 p-2 text-sm rounded"
-    >
-      <span className="absolute left-0 inline-flex pointer-events-none">
+    <div className='relative flex items-center justify-between border border-gray-100 dark:border-gray-800 p-2 text-sm rounded'>
+      <span className='absolute left-0 inline-flex pointer-events-none'>
         {Icons[colorMode ?? 'system']}
       </span>
       <select
-        className="px-6 focus:outline-none w-full appearance-none bg-transparent"
+        className='px-6 focus:outline-none w-full appearance-none bg-transparent'
         value={colorMode ?? 'system'}
         onChange={(event) => {
           setColorMode(event.target.value as ColorMode);
         }}
       >
-        <option className="flex flex-row" value="light">
+        <option className='flex flex-row' value='light'>
           Light
         </option>
-        <option className="flex flex-row" value="dark">
+        <option className='flex flex-row' value='dark'>
           Dark
         </option>
-        <option className="flex flex-row" value="system">
+        <option className='flex flex-row' value='system'>
           System
         </option>
       </select>
