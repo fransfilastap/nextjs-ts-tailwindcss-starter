@@ -18,12 +18,12 @@ const ColorModeSwitcher: FunctionComponent<ColorModeSelectionProps> = (
   useIsMounted();
 
   return (
-    <div className='relative flex items-center justify-between border border-gray-100 dark:border-gray-800 p-2 text-sm rounded'>
-      <span className='absolute left-0 inline-flex pointer-events-none'>
+    <div className='relative flex flex-row items-center justify-between px-2 py-2 text-sm border border-gray-100 rounded group dark:border-gray-800'>
+      <span className='absolute inline-flex cursor-pointer pointer-events-auto'>
         {Icons[colorMode ?? 'system']}
       </span>
       <select
-        className='px-6 focus:outline-none w-full appearance-none bg-transparent'
+        className='w-full px-8 bg-transparent border-none outline-none appearance-none cursor-pointer ring-0 focus-visible:outline-none focus-within:outline-none outline-offset-0 focus:outline-none'
         value={colorMode ?? 'system'}
         onChange={(event) => {
           setColorMode(event.target.value as ColorMode);
@@ -39,7 +39,7 @@ const ColorModeSwitcher: FunctionComponent<ColorModeSelectionProps> = (
           System
         </option>
       </select>
-      <span className='absolute right-0 inline-flex pointer-events-none'>
+      <span className='absolute right-0 inline-flex text-gray-500 pointer-events-none'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
