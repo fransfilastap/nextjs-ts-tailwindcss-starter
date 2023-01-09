@@ -1,11 +1,12 @@
 {
+  "root": true,
   "env": {
     "browser": false,
     "node": true,
     "es2021": true
   },
   "extends": ["eslint:recommended","next","next/core-web-vitals","plugin:@typescript-eslint/recommended","prettier"],
-  "plugins": ["@typescript-eslint"],
+  "plugins": [],
   "parser": "",
   "parserOptions": {
     "project": "./tsconfig.json"

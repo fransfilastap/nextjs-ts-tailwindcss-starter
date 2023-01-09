@@ -20,10 +20,11 @@ const updateColorMode = (): void => {
 };
 
 const useColorMode = (): [
-  colorMode: ColorMode | null,
+  colorMode: ColorMode,
+  // eslint-disable-next-line no-unused-vars
   setColorMode: (colorMode: ColorMode) => void
 ] => {
-  const [colorMode, setColorMode] = useState<ColorMode | null>(null);
+  const [colorMode, setColorMode] = useState<ColorMode>();
   const isMounted = useIsMounted();
 
   useIsomorphicLayoutEffect(() => {
@@ -80,7 +81,7 @@ const useColorMode = (): [
     };
   }, []);
 
-  return [colorMode, setColorMode];
+  return [colorMode ?? 'system', setColorMode];
 };
 
 export default useColorMode;
