@@ -14,7 +14,7 @@ const RootLayout: FunctionComponent<PropsWithChildren> = ({
   children,
 }: PropsWithChildren) => {
   return (
-    <div className={clsx([inter.variable, firaSans.variable])}>
+    <div className={clsx([inter.variable, firaSans.variable], 'font-sans')}>
       <Header />
       <main>
         {children}

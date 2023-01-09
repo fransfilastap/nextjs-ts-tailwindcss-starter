@@ -12,10 +12,7 @@ export default function Container({
   ...rest
 }: ContainerProps): ReactElement {
   return (
-    <div
-      {...rest}
-      className={clsxtw('container mx-auto p-2 md:p-4 sm:p-3', className)}
-    >
+    <div {...rest} className={clsxtw('container mx-auto p-4', className)}>
       {children}
     </div>
   );
