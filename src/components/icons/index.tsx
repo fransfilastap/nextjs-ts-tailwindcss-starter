@@ -1,14 +1,21 @@
-import { FunctionComponent } from 'react';
+import clsxtw from '@/lib/clsxtw';
+import { ComponentPropsWithoutRef, FunctionComponent } from 'react';
 
-export const SunIcon: FunctionComponent = (props) => {
+type IconProps = ComponentPropsWithoutRef<'svg'>;
+
+export const SunIcon: FunctionComponent<IconProps> = ({
+  className,
+  ...props
+}: IconProps) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
       fill='none'
       viewBox='0 0 24 24'
       strokeWidth={1.5}
       stroke='currentColor'
-      className='w-6 h-6'
+      className={clsxtw('w-6 h-6', className)}
     >
       <path
         strokeLinecap='round'
@@ -19,7 +26,10 @@ export const SunIcon: FunctionComponent = (props) => {
   );
 };
 
-export const MoonIcon: FunctionComponent = (props) => {
+export const MoonIcon: FunctionComponent<IconProps> = ({
+  className,
+  ...props
+}: IconProps) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -27,7 +37,7 @@ export const MoonIcon: FunctionComponent = (props) => {
       viewBox='0 0 24 24'
       strokeWidth={1.5}
       stroke='currentColor'
-      className='w-6 h-6'
+      className={clsxtw('w-6 h-6', className)}
     >
       <path
         strokeLinecap='round'
@@ -38,15 +48,19 @@ export const MoonIcon: FunctionComponent = (props) => {
   );
 };
 
-export const SystemIcon: FunctionComponent = (props) => {
+export const SystemIcon: FunctionComponent<IconProps> = ({
+  className,
+  ...props
+}: IconProps) => {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
+      {...props}
       fill='none'
       viewBox='0 0 24 24'
       strokeWidth={1.5}
       stroke='currentColor'
-      className='w-6 h-6'
+      className={clsxtw('w-6 h-6', className)}
     >
       <path
         strokeLinecap='round'

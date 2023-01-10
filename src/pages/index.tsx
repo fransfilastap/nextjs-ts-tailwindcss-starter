@@ -9,7 +9,14 @@ export default function Home(): ReactElement {
   return (
     <RootLayout>
       <Seo />
-      <Container className='flex flex-col items-center justify-center min-h-screen gap-2'>
+      <Container className='flex flex-col items-center justify-center min-h-screen gap-2 overflow-hidden'>
+        <div
+          className="absolute min-h-screen z-[-1] inset-0 bg-grid-slate-800/10 bg-[bottom_1px_center] dark:bg-grid-slate-400/10 dark:bg-bottom dark:border-b dark:border-slate-100/5"
+          style={{
+            maskImage: 'linear-gradient(to bottom, transparent, black)',
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
+          }}
+        ></div>
         <h5 className='text-xl font-bold text-center text-black md:text-4xl dark:text-white'>
           Next.js + Tailwind CSS + TypeScript Starter
         </h5>

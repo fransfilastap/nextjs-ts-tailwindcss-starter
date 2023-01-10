@@ -7,10 +7,26 @@ export default function Favicons(): ReactElement {
         content='max-snippet:-1, max-image-preview:large, max-video-preview:-1'
         name='robots'
       />
-      <link rel='apple-touch-icon' sizes='57x57' href='/apple-icon-57x57.png' />
-      <link rel='apple-touch-icon' sizes='60x60' href='/apple-icon-60x60.png' />
-      <link rel='apple-touch-icon' sizes='72x72' href='/apple-icon-72x72.png' />
-      <link rel='apple-touch-icon' sizes='76x76' href='/apple-icon-76x76.png' />
+      <link
+        rel='apple-touch-icon'
+        sizes='57x57'
+        href='/apple-icon-57x57.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='60x60'
+        href='/apple-icon-60x60.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='72x72'
+        href='/apple-icon-72x72.png'
+      />
+      <link
+        rel='apple-touch-icon'
+        sizes='76x76'
+        href='/apple-icon-76x76.png'
+      />
       <link
         rel='apple-touch-icon'
         sizes='114x114'
@@ -60,10 +76,22 @@ export default function Favicons(): ReactElement {
         sizes='16x16'
         href='/favicon-16x16.png'
       />
-      <link rel='manifest' href='/manifest.json' />
-      <meta name='msapplication-TileColor' content='#ffffff' />
-      <meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
-      <meta name='theme-color' content='#ffffff' />
+      <link
+        rel='manifest'
+        href='/manifest.json'
+      />
+      <meta
+        name='msapplication-TileColor'
+        content='#ffffff'
+      />
+      <meta
+        name='msapplication-TileImage'
+        content='/ms-icon-144x144.png'
+      />
+      <meta
+        name='theme-color'
+        content='#ffffff'
+      />
     </>
   );
 }

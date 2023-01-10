@@ -28,6 +28,7 @@ This repository is 🔋 battery packed with:
 1. Use this repository as template
 
    **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
+
 2. Using `create-next-app`
 
    ```bash

@@ -1,5 +1,10 @@
 import { ColorMode } from '@/types';
-import { createContext, FunctionComponent, PropsWithChildren } from 'react';
+import {
+  createContext,
+  FunctionComponent,
+  PropsWithChildren,
+  useEffect,
+} from 'react';
 import useColorMode from '@/hooks/useColorMode';
 
 export interface IThemeContext {

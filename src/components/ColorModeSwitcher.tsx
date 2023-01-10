@@ -5,9 +5,9 @@ import useIsMounted from '@/hooks/useIsMounted';
 import { MoonIcon, SunIcon, SystemIcon } from '@/components/icons';
 
 const Icons: Record<ColorMode, ReactElement> = {
-  light: <SunIcon />,
-  dark: <MoonIcon />,
-  system: <SystemIcon />,
+  light: <SunIcon className='w-4 h-4' />,
+  dark: <MoonIcon className='w-4 h-4' />,
+  system: <SystemIcon className='w-4 h-4' />,
 };
 type ColorModeSelectionProps = ComponentPropsWithRef<'select'>;
 
@@ -18,7 +18,7 @@ const ColorModeSwitcher: FunctionComponent<ColorModeSelectionProps> = (
   useIsMounted();
 
   return (
-    <div className='relative flex flex-row items-center justify-between px-2 py-2 text-sm border border-gray-100 rounded group dark:border-gray-800'>
+    <div className='relative z-10 flex flex-row items-center justify-between px-2 py-2 text-sm border border-gray-100 rounded group dark:border-gray-800'>
       <span className='absolute inline-flex cursor-pointer pointer-events-auto'>
         {Icons[colorMode ?? 'system']}
       </span>
@@ -29,13 +29,22 @@ const ColorModeSwitcher: FunctionComponent<ColorModeSelectionProps> = (
           setColorMode(event.target.value as ColorMode);
         }}
       >
-        <option className='flex flex-row' value='light'>
+        <option
+          className='flex flex-row'
+          value='light'
+        >
           Light
         </option>
-        <option className='flex flex-row' value='dark'>
+        <option
+          className='flex flex-row'
+          value='dark'
+        >
           Dark
         </option>
-        <option className='flex flex-row' value='system'>
+        <option
+          className='flex flex-row'
+          value='system'
+        >
           System
         </option>
       </select>

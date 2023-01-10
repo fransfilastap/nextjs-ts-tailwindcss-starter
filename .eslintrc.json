@@ -5,7 +5,13 @@
     "node": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended","next","next/core-web-vitals","plugin:@typescript-eslint/recommended","prettier"],
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
   "plugins": [],
   "parser": "",
   "parserOptions": {

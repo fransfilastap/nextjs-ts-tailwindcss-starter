@@ -5,11 +5,10 @@ const {
   default: flattenColorPalette,
 } = require('tailwindcss/lib/util/flattenColorPalette');
 
-
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -37,6 +36,6 @@ module.exports = {
         },
         { values: flattenColorPalette(theme('backgroundColor')), type: 'color' }
       );
-    }
+    },
   ],
-}
+};
