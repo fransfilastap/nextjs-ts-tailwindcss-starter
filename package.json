@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint . --fix --max-warnings=0",
+    "typecheck": "tsc --noEmit --incremental false",
     "format": "prettier . --write",
     "prepare": "husky install"
   },
