@@ -28,6 +28,7 @@ const ColorModeSwitcher: FunctionComponent<ColorModeSelectionProps> = (
         onChange={(event) => {
           setColorMode(event.target.value as ColorMode);
         }}
+        {...props}
       >
         <option
           className='flex flex-row'
