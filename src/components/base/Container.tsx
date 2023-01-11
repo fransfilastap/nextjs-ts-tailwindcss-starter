@@ -5,7 +5,7 @@ import {
 } from 'react';
 import clsxtw from '@/lib/clsxtw';
 
-type ContainerProps = PropsWithChildren<ComponentPropsWithoutRef<'div'>>;
+type ContainerProps = ComponentPropsWithoutRef<'div'>;
 export default function Container({
   children,
   className,

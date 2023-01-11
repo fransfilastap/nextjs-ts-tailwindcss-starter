@@ -1,11 +1,7 @@
-import {
-  ComponentPropsWithRef,
-  FunctionComponent,
-  PropsWithChildren,
-} from 'react';
+import { ComponentPropsWithRef, FunctionComponent } from 'react';
 import clsxtw from '@/lib/clsxtw';
 
-type NavigationProps = PropsWithChildren<ComponentPropsWithRef<'nav'>>;
+type NavigationProps = ComponentPropsWithRef<'nav'>;
 const Navigation: FunctionComponent<NavigationProps> = ({
   className,
   children,
