@@ -1,7 +1,13 @@
 version: 2
 
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 updates:
-- package-ecosystem: npm
+- package-ecosystem: yarn
   directory: '/'
   target-branch: 'main'
   schedule:
