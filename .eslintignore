@@ -36,3 +36,7 @@ yarn-error.log*
 
 # changelog
 CHANGELOG.md
+
+commitlint.config.js
+tailwind.config.js
+postcss.config.js
